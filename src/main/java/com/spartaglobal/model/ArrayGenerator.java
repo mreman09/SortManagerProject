@@ -1,6 +1,5 @@
-package com.spartaglobal.sorters;
+package com.spartaglobal.model;
 
-import java.util.Arrays;
 import java.util.Random;
 
 

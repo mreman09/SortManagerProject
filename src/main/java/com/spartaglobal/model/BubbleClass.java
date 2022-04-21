@@ -1,4 +1,4 @@
-package com.spartaglobal.sorters;
+package com.spartaglobal.model;
 
 public class BubbleClass {
         public void bubbleSort(int[] array){

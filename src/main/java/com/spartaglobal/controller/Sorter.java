@@ -1,7 +1,7 @@
-package com.spartaglobal.sorters;
+package com.spartaglobal.controller;
 
-import com.spartaglobal.sorters.BubbleClass;
-import com.spartaglobal.sorters.MergeSort;
+import com.spartaglobal.model.BubbleClass;
+import com.spartaglobal.model.MergeSort;
 
 import java.util.Arrays;
 import java.util.Random;

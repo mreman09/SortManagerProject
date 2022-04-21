@@ -1,4 +1,4 @@
-package com.spartaglobal.sorters;
+package com.spartaglobal.model;
 
 public class MergeSort {
     public static void mergesSort(int[] inputArray){
