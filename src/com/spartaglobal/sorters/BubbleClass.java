@@ -1,3 +1,5 @@
+package com.spartaglobal.sorters;
+
 public class BubbleClass {
         public void bubbleSort(int[] array){
 

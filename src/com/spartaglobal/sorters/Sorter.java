@@ -1,3 +1,6 @@
+package com.spartaglobal.sorters;
+
+import com.spartaglobal.sorters.BubbleClass;
 import com.spartaglobal.sorters.MergeSort;
 
 import java.util.Arrays;
