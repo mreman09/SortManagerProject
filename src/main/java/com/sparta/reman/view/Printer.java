@@ -24,4 +24,6 @@ public class Printer {
     public static void printPerformanceTestString(String message, long time) {
         System.out.printf(message, time);
     }
+
+
 }

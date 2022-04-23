@@ -8,7 +8,7 @@ public class SortManager {
     public static int inputLength = 0;
     public static String sortAlgorithm = "";
 
-    public static void length() {
+    public static int length() {
 
         boolean validInput = false;
 
@@ -17,10 +17,10 @@ public class SortManager {
             try {
                 inputLength = myObject.nextInt();
                 validInput = true;
-            } catch (InputMismatchException msg) {
-                System.out.println("Input Mismatch Exception has occurred " + msg.getMessage());
+            } catch (InputMismatchException e) {
+                System.out.println("Input Mismatch Exception has occurred you've entered a " + e.getMessage() + " value\nTry entering a number mate");
             }
-        }
+        } return inputLength;
     }
     public static void sorting(){
         boolean validInput = false;
@@ -34,6 +34,7 @@ public class SortManager {
                     validInput = true;
                 } else{
                     validInput = false;
+                    System.out.println("Input must be Bubble or Merge (Caps does not matter) you have entered " + sortAlgorithm + "\nTry Bubble" );
                 }
             } catch (InputMismatchException msg) {
                 System.out.println("Input Mismatch Exception has occurred " + msg.getMessage());

@@ -2,9 +2,12 @@ package com.sparta.reman.sort;
 
 public class BubbleSort implements Sorter {
     private static int[] numberArray;
+    public static long startTime = 0;
+    public static long endTime = 0;
 
     @Override
     public int[] sortArray(int[] inputArray) {
+        startTime =  System.nanoTime();
         int n = inputArray.length;
 
         for (int i = 0; i < n - 1; i++)
@@ -15,6 +18,7 @@ public class BubbleSort implements Sorter {
                     inputArray[j] = inputArray[j + 1];
                     inputArray[j + 1] = temp;
                 }
+        endTime =  System.nanoTime();
         return numberArray;
     }
 }

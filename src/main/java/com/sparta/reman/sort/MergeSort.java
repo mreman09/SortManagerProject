@@ -3,14 +3,18 @@ package com.sparta.reman.sort;
 
 public class MergeSort implements Sorter {
 
+    public static long startTime = 0;
+    public static long endTime = 0;
 
     @Override
     public int[] sortArray(int[] inputArray) {
+        startTime = System.nanoTime();
         mergeArray(inputArray, inputArray.length);
+        endTime = System.nanoTime();
         return inputArray;
     }
 
-    private int[] mergeArray(int[]inputArray, int n){
+    public static int[] mergeArray(int[] inputArray, int n){
         n = inputArray.length;
         if (n < 2) {
             return inputArray;
