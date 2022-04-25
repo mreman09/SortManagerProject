@@ -1,4 +1,4 @@
-package com.sparta.sort.controller;
+package com.sparta.exceptions;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

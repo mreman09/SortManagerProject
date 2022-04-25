@@ -1,8 +1,5 @@
 package com.sparta.sort.sort;
 
-import com.sparta.logging.LoggingClass;
-import com.sparta.sort.controller.SortManager;
-
 import java.util.Random;
 
 public class ArrayGenerator {

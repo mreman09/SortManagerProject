@@ -1,5 +1,6 @@
 package com.sparta.sort.controller;
 
+import com.sparta.exceptions.SortManager;
 import com.sparta.logging.LoggingClass;
 import com.sparta.sort.view.Printer;
 import com.sparta.sort.sort.*;
@@ -15,13 +16,8 @@ public class DisplayManager {
         Sorter sorter = SortFactory.getSort(SortManager.sortAlgorithm);
         sorter.sortArray(newArray);
         DisplayManager.showArray(newArray, true);
-        if(SortManager.sortAlgorithm.equals("bubble")){
-            System.out.println("time taken in ms to execute bubble algorithm: ");
-            System.out.println((BubbleSort.endTime - BubbleSort.startTime));
-        } else {
-            System.out.println("time in ms taken to execute Merge algorithm: ");
-            System.out.println((MergeSort.endTime - MergeSort.startTime)/1000000);
-        }
+        Printer.timeTaken(SortManager.sortAlgorithm);
+
 
 
 
@@ -29,10 +25,10 @@ public class DisplayManager {
 
     public static void showArray(int[] showNewArray, boolean sorted) {
         if (sorted == false) {
-            Printer.printString("\nThe random generated array is the following: ");
+            Printer.printString("\nRandom array: ");
             Printer.printIntArray(showNewArray);
         } else {
-            Printer.printString("\nThe sorted array is the following: ");
+            Printer.printString("\nSorted array: ");
             Printer.printIntArray(showNewArray);
             System.out.println("");
             LoggingClass.logger.info("Length of array chosen by user was: " + String.valueOf(SortManager.inputLength));
