@@ -1,4 +1,4 @@
-# **Reman Sorting Algorithm**
+# **Reman's Sorting Algorithm**
 
 ## How to Use
 1. Enter a number to create the size of an array
