@@ -1,5 +1,7 @@
 package com.sparta.exceptions;
 
+import com.sparta.logging.LoggingClass;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -18,7 +20,8 @@ public class SortManager {
                 inputLength = myObject.nextInt();
                 validInput = true;
             } catch (InputMismatchException e) {
-                System.out.println("Input Mismatch Exception has occurred you've entered a " + e.getMessage() + " value\nTry entering a number mate");
+                LoggingClass.logger.error("User did not enter a number ");
+                System.out.println("\nInput mismatch exception occurred, you've entered something unexpected\nTry entering a number mate");
             }
         } return inputLength;
     }
@@ -34,10 +37,12 @@ public class SortManager {
                     validInput = true;
                 } else{
                     validInput = false;
+                    LoggingClass.logger.error("User entered: " + "'"+sortAlgorithm+"'" + " instead of Bubble || Merge");
                     System.out.println("Input must be Bubble or Merge (Caps does not matter) you have entered " + sortAlgorithm + "\nTry Bubble" );
                 }
-            } catch (InputMismatchException msg) {
-                System.out.println("Input Mismatch Exception has occurred " + msg.getMessage());
+            } catch (InputMismatchException e) {
+                LoggingClass.logger.error("User did not type Bubble || Merge: ", e);
+                System.out.println("\nInput Mismatch Exception has occurred ");
             }
         }
     }
